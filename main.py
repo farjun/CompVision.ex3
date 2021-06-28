@@ -47,11 +47,5 @@ def create_blur_kernels():
     k3 /= k3.sum()
     k4 = np.fliplr(k3)
 
-    im = load_image("./data/pika.jpeg" )
-    im = cv2.resize(im, (256,256))
-    # show_img( im )
-    # for k in [k1, k2, k3, k4]:
-    #     show_img( blur_image(im, k) )
-
-
-optimize_latent_codes(Config())
+if __name__ == '__main__':
+    optimize_latent_codes(Config())
